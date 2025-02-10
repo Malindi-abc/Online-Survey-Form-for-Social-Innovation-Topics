@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obesity and Happiness Survey</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+            background-color:  #DAF7A6 ;
+            font-family: Verdana;
+            text-align: center;
+        }
+
+ </style>
+</head>
+<body>
+   <!--background images-->
+    <div class="background-img img1"></div>
+    <div class="background-img img2"></div>
+    <div class="background-img img4"></div>
+    <div class="background-img img5"></div>
+    <div class="background-img img6"></div>
+    <div class="background-img img7"></div>
+    
+    <div class="background-img img9"></div>
+    <div class="background-img img10"></div>
+
+    
+    <form id="survey-form" name="obesityForm" onsubmit="confirmation(event)" method="post">
+    <!--starting survey-->
+    <div class="form-container">
+        <h1>Obesity And Happiness Survey</h1> <br>
+
+       
+            <!-- Participant details -->
+            <div class="form-control">
+                <label for="name">Participant Name (No More Than 20 Letters)</label>
+                <input type="text" id="name" name="name" maxlength="20" placeholder="Enter Your Name"required>
+            </div>
+
+            <div class="form-control">
+                <label for="state">State (Please Select Your State)</label>
+                <select name="state" id="state" required>
+                    <option value="New South Wales">New South Wales</option>
+                    <option value="Victoria">Victoria</option>
+                    <option value="Western Australia">Western Australia</option>
+                    <option value="Northern Territory">Northern Territory</option>
+                    <option value="Queensland">Queensland</option>
+                    <option value="South Australia">South Australia</option>
+                    <option value="Tasmania">Tasmania</option>
+                    <option value="Australian Capital Territory">Australian Capital Territory</option>
+
+                </select>
+            </div>
+
+            
+
+            <div class="form-control">
+                <label for="email">Email (name@example.com)</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-control">
+                <label for="mobile">Mobile Number (No More Than 10 Numbers)</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" placeholder="Enter Your Mobile Number" required>
+            </div>
+
+            <!-- Survey questions -->
+            <p> Lets Begin The Questionnaire </p> 
+            <div class="form-control">
+            <div class="form-images">
+                <img src="Images/thumbs up.jpg" alt="Image 1" class="form-img">
+                
+            </div>
+
+            <div class= "form-control">
+                <label for="gender"> Whats Your Gender</label>
+                <select name="gender" id="gender" required>
+                    <option value="Male"> Male</option>
+                    <option value="Female"> Female</option>
+        
+                </select>
+            </div>
+
+                <label for="exercisefrequency">How Often Do You Exercise?</label>
+                <input type="text" id="exercisefrequency" name="exercisefrequency" required>
+            </div>
+
+            <div class="form-control">
+                <fieldset>
+                    <legend>Rate Your Overall Happiness</legend>
+                    <label><input type="radio" name="happiness" value="Very Happy" required> Very Happy</label><br>
+                    <label><input type="radio" name="happiness" value="Happy" > Happy </label><br>
+                    <label><input type="radio" name="happiness" value="Neutral" > Neutral</label><br>
+                    <label><input type="radio" name="happiness" value="Unhappy" > Unhappy</label><br>
+                    <label><input type="radio" name="happiness" value="Very Unhappy" > Very Unhappy</label><br>
+                </fieldset>
+            </div>
+
+            <div class="form-control">
+                <label for="sugarImpact">Why You Think That Sugar Affects On Your Daily Activities and Health?</label>
+                <input type="text" id="sugarImpact" name="sugarImpact" required>
+            </div>
+
+            <div class="form-control">
+                <label for="obesityfactors">Factors Contributing to Obesity</label>
+                <select id="obesityfactors" name="obesityfactors" required>
+                    <option value="Diet">Diet</option>
+                    <option value="Poor Exercise">Poor Exercise</option>
+                    <option value="Genetics">Genetics</option>
+                    <option value="Lack of Knowledge">Lack of Knowledge About Exercises and Healthy Foods</option>
+                </select>
+            </div>
+            <br>
+
+            <div class= "form-control">
+                <label for="age"> Can You Tell Us Your Age</label>
+                <select name="age" id="age" required>
+                    <option value="under 18"> Under 18</option>
+                    <option value="18-24"> 18-24</option>
+                    <option value="25-34">25-34</option>
+                    <option value="35-54">45-54</option>
+                    <option value="55-64">55-64</option>
+                    <option value="Over 65">Over 65</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="form-control">
+                <label for= "experience"> Can You Describe Any Personal Experience You Have Faced Related To the Obesity And Happiness?
+                <textarea id="experience" name="experience" rows="5" cols="50" required></textarea><br>
+            </label>
+             </div>
+
+            <div class="form-control">
+                <label for="consumeFoods"> Can You Tell Us How Often You Are Having Consume Foods? </label>
+                <select name="consumeFoods" id ="consumeFoods" required>
+                    <option value ="Never"> Never</option>
+                    <option value = "Rarely"> Rerely </option>
+                    <option value="Sometiomes"> Sometimes </option>
+                    <option value ="Very Opten"> Very Often </option>
+                </select>
+            </div>
+
+
+            <div class="form-control">
+                <fieldset>
+                    <legend>Do You Believe That Their Is A Connection Between Obesity And Mental Health? </legend>
+                    <label> <input type ="radio" name="mentalHealth" value="yes" required> Yes </label></br>
+                    <label> <input type="radio" name="mentalHealth" Value="No" required>  No  </label></br>
+                </fieldset>
+            </div>
+
+            <div class="form-control">
+                <fieldset>
+                    <legend>Do You Think It Is Challenging To Maintain Good Weight? </legend>
+                    <label> <input type ="radio" name="Challenging" value="yes" required> Yes </label></br>
+                    <label> <input type="radio" name="Challenging" Value="No" required>  No  </label></br>
+                </fieldset>
+            </div>
+
+            <div class="form-control">
+                <fieldset>
+                    <legend> Did You Ever Seek Help From Professional Trainer For Your Weight Management?</legend>
+                    <label> <input type="radio" name="Help" value="yes" required> Yes </label><br>
+                    <label><input type="radio" name="Help" value="No" required> No </label><br>
+                </fieldset>
+            </div>
+
+            <div class="form-control">
+                <fieldset>
+                    <legend> How You Feel About Body Image On Social Media Platforms?</legend>
+
+                    <label> <input type="checkbox" name="Feel" value="promotes"> It Promotes Unrealistic Standards. </label> <br>
+                   
+                    <label> <input type="checkbox" name="Feel" value="Healthy Life Style" >   It Encourage Me For Healthy Life Style. </label> <br>
+                  
+                    <label> <input type="checkbox" name="Feel" value="Motivate"> It Encourage Me For Take Care My Self. </label> <br>
+                    
+                    <label> <input type="checkbox" name="Feel" value="impact" > It's Not Impact Any Of My Perceptions. </label> <br>
+
+                    <label> <input type="checkbox" name="Feel" value="stress" > It's Make Me Stress And Anxiety. </label> <br>
+                  
+                </fieldset>
+            </div>
+
+            <div class="form-control">
+                <fieldset>
+                    <legend> What Motivates You To Achieve A Healthy Weight? </legend>
+
+                    <label> <input type="checkbox" name="Health" value="Health" > Personal Health.  </label> <br>
+                   
+                    <label> <input type="checkbox" name="Health" value="mental" >   Mental Wel-being </label> <br>
+                  
+                    <label> <input type="checkbox" name="Health" value="social" > Social Acceptence. </label> <br>
+                    
+                    <label> <input type="checkbox" name="Health" value="athletic" > Athletic Performance </label> <br>
+                  
+                </fieldset>
+            </div>
+
+             <div class="form-control">
+                <label for= "helping"> In Your Opinion What Kind Of Help You Are Getting From The Government In Your Country? </label> <br>
+                <textarea id="helping" name="helping" rows="5" cols="50" required></textarea><br>
+            </label>
+             </div>
+
+             <div class="form-control">
+                <label for="lifestyle">How Would You Describe Your Current Life Style</label>
+                <select name="lifestyle" id="lifestyle" required>
+                    <option value="Active">Active</option>
+                    <option value="Moderately Active "> Moderately Active</option>
+                    <option value="NotActive">Not Active</option>
+                    <option value="Very Active">Very Active</option>
+                </select>
+            </div>
+
+
+            <div class ="form-control">
+                <label for="challenge"> What Kind Of challenge Are You Facing When You Maintain Your Weight? </label> <br> <br>
+            <input type="text" id="challenge" name="challenge" required><br>
+            </div>
+
+            <div class="form-control">
+                <label for="opinion"> How Community Can Help Motivate People Who Diagnose With Obesity? </label> <br>
+                <textarea id="opinion" name="opinion" rows="5" cols="50"required> </textarea> <br>
+            </div>
+
+            <div class="form-control">
+                <label for="reason"> Whats Your Main Reason For Trying To Improve Your Health? </label> <br>
+                  <textarea id="reason" name="reason" rows="5" cols="50"required> </textarea> <br>
+            </div>
+
+            <div class="form-control">
+                 <fieldset>
+                    <legend> Can You Tell Us Who Is Your Support System For Maintaining Your Health And Weight?</legend>
+                    <label> <input type="checkbox" name="Support" value="Family" > Family </lebel><br><br>
+                    <label><input type="checkbox" name="Support" value="Friends"> Friends </label><br>
+                    <label><input type="checkbox" name="Support" value="Physical Instructor" > Physical Instructor </label><br>
+                    <label><input type="checkbox" name="Support" value="group" > Fitness Groups </label><br>
+                </fieldset>
+           </div>
+
+           <div class="form-control">
+            <fieldset>
+                <legend> Can You Tell Us How Long Do You Exercise For One Day? </legend>
+                <select name="time" id ="time" required>
+                    <option value ="1 Hour"> 1 Hour</option>
+                    <option value = "30 Min "> 30 Minutes </option>
+                    <option value=" 1 Hour 30 Min"> 1 Hour 30 Min </option>
+                    <option value ="No Excercise"> No excercise</option>
+                </select>
+
+
+            <button type="submit" value="Submit"> Submit </button>
+             <!-- Result display section -->
+        </form>
+         <div id="results" class="results"></div>
+
+   
+
+<script>
+    function confirmation(event) {
+    event.preventDefault();
+    window.confirm("Survey Completed! Thank You For Your Time");
+
+    // Collect data from form fields
+    let name = document.getElementById('name').value;
+    let state = document.getElementById('state').value;
+    let email = document.getElementById('email').value;
+    let mobile = document.getElementById('mobile').value;
+    let gender = document.getElementById('gender').value;
+    let exerciseFrequency = document.getElementById('exercisefrequency').value;
+    let happiness = document.querySelector('input[name="happiness"]:checked').value;
+    let sugarImpact = document.getElementById('sugarImpact').value;
+    let obesityFactors = document.getElementById('obesityfactors').value;
+    let age = document.getElementById('age').value;
+    let experience = document.getElementById('experience').value;
+    let consumeFoods = document.getElementById('consumeFoods').value;
+    let mentalHealth = document.querySelector('input[name="mentalHealth"]:checked').value;
+    let challenging = document.querySelector('input[name="Challenging"]:checked').value;
+    let help = document.querySelector('input[name="Help"]:checked').value;
+    let helping = document.getElementById('helping').value;
+    let lifestyle = document.getElementById('lifestyle').value;
+    let challenge = document.getElementById('challenge').value;
+    let opinion = document.getElementById('opinion').value;
+    let reason = document.getElementById('reason').value;
+    let time = document.getElementById('time').value;
+
+    // Collect checkbox values for feel, health, and support
+    let feel = [];
+    document.querySelectorAll('input[name="Feel"]:checked').forEach((checkbox) => {
+        feel.push(checkbox.value);
+    });
+
+    let health = [];
+    document.querySelectorAll('input[name="Health"]:checked').forEach((checkbox) => {
+        health.push(checkbox.value);
+    });
+
+    let support = [];
+    document.querySelectorAll('input[name="Support"]:checked').forEach((checkbox) => {
+        support.push(checkbox.value);
+    });
+
+    // Prepare the results output
+    let output = `
+        <h2> Your Survey Results Are Here :</h2>
+        <p><strong>Participant Name </strong> ${name}</p>
+        <p><strong>State:</strong> ${state}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Mobile:</strong> ${mobile}</p>
+        <p><strong>Gender:</strong> ${gender}</p>
+        <p><strong>EHow Often Do You Exercise :</strong> ${exerciseFrequency}</p>
+        <p><strong>Rate Your Overall Happiness</strong> ${happiness}</p>
+        <p><strong>Why You Think That Sugar Affects On Your Daily Activities and Health?</strong> ${sugarImpact}</p>
+        <p><strong>Factors Contributing to Obesity</strong> ${obesityFactors}</p>
+        <p><strong>Age:</strong> ${age}</p>
+        <p><strong>Can You Describe Any Personal Experience You Have Faced Related To the Obesity And Happiness?</strong> ${experience}</p>
+        <p><strong>Can You Tell Us How Often You Are Having Consume Foods? :</strong> ${consumeFoods}</p>
+        <p><strong>Do You Believe That Their Is A Connection Between Obesity And Mental Health?</strong> ${mentalHealth}</p>
+        <p><strong>Do You Think It Is Challenging To Maintain Good Weight? </strong> ${challenging}</p>
+        <p><strong>Did You Ever Seek Help From Professional Trainer For Your Weight Management?</strong> ${help}</p>
+        <p><strong>How You Feel About Body Image On Social Media Platforms?</strong> ${feel.join(', ')}</p>
+        <p><strong>What Motivates You To Achieve A Healthy Weight?</strong> ${health.join(', ')}</p>
+        <p><strong>In Your Opinion What Kind Of Help You Are Getting From The Government In Your Country?</strong> ${helping}</p>
+        <p><strong>How Would You Describe Your Current Life Style ?</strong> ${lifestyle}</p>
+        <p><strong>What Kind Of challenge Are You Facing When You Maintain Your Weight?</strong> ${challenge}</p>
+        <p><strong>How Community Can Help Motivate People Who Diagnose With Obesity?</strong> ${opinion}</p>
+        <p><strong>Whats Your Main Reason For Trying To Improve Your Health?</strong> ${reason}</p>
+        <p><strong>Can You Tell Us Who Is Your Support System For Maintaining Your Health And Weight?</strong> ${support.join(', ')}</p>
+        <p><strong>Can You Tell Us How Long Do You Exercise For One Day?</strong> ${time}</p>
+    `;
+
+    // Display results
+
+    document.getElementById('results').innerHTML = output;
+   
+}
+
+</script>
+
+</body>
+</html>
